@@ -1,0 +1,9 @@
+# Ignore all .terraform folders in any sub-directory
+**/.terraform/
+
+# Ignore all state files
+**/*.tfstate
+**/*.tfstate.*
+
+# Ignore any windows executables
+**/*.exe
