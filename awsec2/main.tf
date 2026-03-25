@@ -44,16 +44,14 @@ resource "aws_security_group" "http_and_ssh" {
 
 # Create the EC2 instance
 resource "aws_instance" "myserver" {
-  ami           = "ami-0e86e20dae9224db8" # Ensure this AMI ID is valid in your region
+  ami           = "ami-0b6c6ebed2801a5cb" # Ensure this AMI ID is valid in your region
   instance_type = "t3.micro"
   security_groups = [aws_security_group.http_and_ssh.name]
 
-  # Optionally, you might want to specify a key_name for SSH access
-  key_name = "new"
 
   # Optionally, add tags
   tags = {
-    Name = "MyServer"
+    Name = "terraform-instance"
   }
 }
 
